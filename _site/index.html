@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beaver Creek Tavern</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="logo">
+          <img src="/images/BCT-Logo.jpg" alt="Beaver Creek Tavern Logo" />
+        </a>
+      </div>
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li>
+            <a href="/" class="active"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="/menu.pdf" target="_blank">Menu</a></li>
+          <li>
+            <a
+              href="/about/"
+              class=""
+              >About</a
+            >
+          </li>
+          <li><a href="/drinks/">Drinks</a></li>
+          <li><a href="/gift-cards/">Gift Cards</a></li>
+          <li>
+            <a
+              href="/location-and-hours/"
+              class=""
+              >Location & Hours</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="social-icons">
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="/images/icons/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="/images/icons/facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <img src="/images/Beaver.webp" alt="Beaver Creek Tavern Hero Image" />
+    </header>
+
+    <!-- Scrolling Gallery Section -->
+    <section class="scrolling-gallery">
+      <div class="gallery-container">
+        <div class="gallery">
+          <!-- 7 original images (JS will clone them) -->
+          <img src="/images/Beer-On-Tap.webp" alt="Beer On Tap" />
+          <img src="/images/Bacon-Cheeseburger.webp" alt="Bacon Cheeseburger" />
+          <img src="/images/Fish-and-Chips.webp" alt="Fish and Chips" />
+          <img src="/images/Wings.webp" alt="Wings" />
+          <img src="/images/Rueben-Sandwich.webp" alt="Rueben Sandwich" />
+          <img src="/images/Ribs.webp" alt="Ribs" />
+          <img src="/images/Mac-and-Cheese.webp" alt="Mac and Cheese" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Info Section -->
+    <section class="bottom-info">
+      <div class="info-container">
+        <div class="info-block">
+          <h3>LOCATION</h3>
+          <p>1350 Bondsville Rd.<br />Downingtown, PA 19335</p>
+        </div>
+        <div class="info-block">
+          <h3>HOURS</h3>
+          <p>Thursday – Monday: 12pm – 11pm <br />Later on Fri/Sat</p>
+          <p><strong>Kitchen:</strong> 12:15pm – 9pm</p>
+          <p>
+            <strong>Prime Rib:</strong> 1st Saturday of each month starting at
+            4pm only.
+          </p>
+        </div>
+        <div class="info-block">
+          <h3>CONTACT</h3>
+          <p>Phone: <a href="tel:+14845930481">484-593-0481</a></p>
+        </div>
+      </div>
+      <div class="social-footer">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="/images/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="/images/icons/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+    </section>
+
+    <!-- JavaScript for "Conveyor Belt" Scrolling Gallery -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const gallery = document.querySelector(".gallery");
+        const images = Array.from(gallery.children);
+
+        // Configuration
+        const visibleImages = 4; // Number of images visible at once
+        const slideTime = 800; // Transition time in ms
+        const pauseTime = 4000; // Pause time in ms
+        const totalImages = images.length;
+
+        // Clone images for seamless infinite loop
+        images.forEach((img) => {
+          const clone = img.cloneNode(true);
+          gallery.appendChild(clone);
+        });
+
+        // Wait for images to load before starting
+        window.addEventListener("load", function () {
+          // Variables to track position
+          let position = 0;
+          let moving = false;
+
+          // Calculate the percentage to move (each image is 25% wide)
+          const movePercentage = 25;
+
+          // Function to move the gallery
+          function slideGallery() {
+            if (moving) return; // Prevent multiple animations
+            moving = true;
+
+            // Move one image width
+            position++;
+            gallery.style.transition = `transform ${slideTime}ms ease-in-out`;
+            gallery.style.transform = `translateX(-${
+              position * movePercentage
+            }%)`;
+
+            // When we reach the end of original set
+            if (position >= totalImages) {
+              // After transition completes, snap back to beginning
+              setTimeout(() => {
+                gallery.style.transition = "none"; // Disable transition for instant reset
+                gallery.style.transform = "translateX(0)"; // Jump to start
+                position = 0; // Reset position counter
+
+                // Force browser to recognize the change before next transition
+                setTimeout(() => {
+                  moving = false;
+                }, 50);
+              }, slideTime);
+            } else {
+              // If not at the end, just release the moving lock after transition
+              setTimeout(() => {
+                moving = false;
+              }, slideTime);
+            }
+
+            // Schedule the next slide after pause
+            setTimeout(slideGallery, pauseTime + slideTime);
+          }
+
+          // Start the slideshow after initial pause
+          setTimeout(slideGallery, pauseTime);
+        });
+      });
+    </script>
+  </body>
+</html>

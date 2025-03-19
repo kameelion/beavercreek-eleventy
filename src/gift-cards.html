@@ -1,0 +1,134 @@
+---
+title: Gift Cards
+permalink: "/gift-cards/"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beaver Creek Tavern</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="logo">
+          <img src="/images/BCT-Logo.jpg" alt="Beaver Creek Tavern Logo" />
+        </a>
+      </div>
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li>
+            <a href="/" class="{{ 'active' if page.url == '/' else '' }}"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="/menu.pdf" target="_blank">Menu</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/drinks/">Drinks</a></li>
+          <li>
+            <a
+              href="/gift-cards/"
+              class="{{ 'active' if page.url == '/gift-cards/' else '' }}"
+              >Gift Cards</a>
+          </li>
+         
+            <a
+              href="/location-and-hours/"
+              class="{{ 'active' if page.url == '/location-and-hours/' else '' }}"
+              >Location & Hours</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <ul class="social-icons">
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="/images/icons/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="/images/icons/facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+   <section class="gift-card-section">
+  <div class="gift-card-content">
+    <div class="gift-card-text">
+      <h2>Gift Cards</h2>
+      <p>
+        Gift Cards available<br />
+        at The Beaver Creek Tavern<br />
+        <b>the perfect gift for any occasion</b><br />
+        Treat someone special<br />
+        to a memorable dining experience!
+      </p>
+    </div>
+    <div class="gift-card-image">
+      <img src="/images/Gift-Card.png" alt="Gift Card" />
+    </div>
+  </div>
+</section>
+
+    <!-- Bottom Info Section -->
+    <section class="bottom-info">
+      <div class="info-container">
+        <div class="info-block">
+          <h3>LOCATION</h3>
+          <p>1350 Bondsville Rd.<br />Downingtown, PA 19335</p>
+        </div>
+
+        <div class="info-block">
+          <h3>HOURS</h3>
+          <p>Thursday – Monday: 12pm – 11pm <br />Later on Fri/Sat</p>
+          <p><strong>Kitchen:</strong> 12:15pm – 9pm</p>
+
+          <p>
+            <strong>Prime Rib:</strong> 1st Saturday of each month starting at
+            4pm only.
+          </p>
+        </div>
+
+        <div class="info-block">
+          <h3>CONTACT</h3>
+          <p>Phone: <a href="tel:+14845930481">484-593-0481</a></p>
+        </div>
+      </div>
+
+      <div class="social-footer">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="/images/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="/images/icons/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,1182 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background color */
+body {
+  background-color: #f2ece4; /* Matches Kasama's beige background */
+}
+
+/* Global Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Navigation Bar - Fixed Alignment */
+.nav-container {
+  display: flex;
+  flex-direction: row; /* Ensures logo, nav, and socials are in a row */
+  align-items: center; /* Aligns everything to the center */
+  justify-content: space-between; /* Spreads items evenly */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px;
+
+  /* 🔽 Add this to push everything down */
+  margin-top: 20px; /* Adjust value if needed */
+}
+
+/* Logo */
+.logo img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+/* Social Icons - Ensured Proper Alignment */
+.social-icons {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  align-items: center; /* Aligns icons with nav */
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Centered Navigation Links - Adjusted for Alignment */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Default Link Style */
+.nav-links a {
+  color: #7d2327; /* Burgundy */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect - Black */
+.nav-links a:hover {
+  color: black !important; /* Turns black when hovered */
+}
+
+/* Active Page - Green */
+.nav-links a.active {
+  color: #6b8e66 !important; /* Green for the active page */
+}
+
+/* Hero Section - Fixed alignment */
+.hero {
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto 0; /* Increased from 30px to 50px to push it down more */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 1400px; /* Ensures it matches the container */
+  height: auto;
+  display: block; /* Removes any default spacing */
+  margin-bottom: 0; /* Ensure no bottom margin */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-center {
+    order: 2;
+    margin-top: 10px;
+  }
+  .social-icons {
+    order: 3;
+    margin-top: 10px;
+  }
+}
+
+/* 🔽 Bottom Info Section - Now in Column Layout */
+.bottom-info {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-block h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #7d2327;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.info-block p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px; /* Adds spacing between each line */
+}
+
+.info-block p:last-child {
+  margin-bottom: 0; /* Prevents extra space at the bottom */
+}
+
+/* 🔽 Social Footer */
+.social-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-footer img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-footer img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Gift Card Hero Section with Background - UPDATED */
+.gift-card-section {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 800px;
+  margin: 50px auto 0; /* Added top margin to match hero section spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Dark Background Image */
+.gift-card-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/background.webp");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4);
+  z-index: 0;
+}
+
+/* Content Container with Lighter Overlay */
+.gift-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 80%;
+  max-width: 1000px;
+  background-color: rgba(242, 236, 228, 0.7);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(125, 35, 39, 0.4); /* Increased opacity from 0.2 to 0.4 */
+}
+
+/* Decorative frame around content - FIXED */
+.gift-card-content::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid rgba(107, 142, 102, 0.6); /* Increased opacity from 0.4 to 0.6 */
+  border-radius: 10px;
+  z-index: 0; /* Changed from -1 to 0 to ensure it's visible */
+  pointer-events: none;
+}
+
+/* Text Block Styling */
+.gift-card-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  position: relative; /* Added to ensure text stays above decorative frame */
+  z-index: 2; /* Added to ensure text stays above decorative frame */
+}
+
+/* Gift Card Image Styling */
+.gift-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added to ensure image stays above decorative frame */
+  z-index: 2; /* Added to ensure image stays above decorative frame */
+}
+
+.gift-card-image img {
+  height: auto;
+  max-height: 400px;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .gift-card-content {
+    flex-direction: column;
+    width: 90%;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .gift-card-text {
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .gift-card-image img {
+    max-height: 300px;
+  }
+
+  .gift-card-section {
+    height: auto;
+    min-height: 600px;
+    padding: 40px 0;
+  }
+}
+
+/* Each gallery image */
+.gallery img {
+  flex: 0 0 25%; /* Exactly 4 images visible (25% each) */
+  min-width: 25%; /* Force 4 images per row */
+  max-width: 25%; /* Maintain consistency */
+  height: 250px; /* Fixed height */
+  object-fit: cover; /* Ensure images fill the space nicely */
+  padding: 0; /* Remove all padding between images */
+}
+
+/* Mobile breakpoints */
+@media (max-width: 768px) {
+  .gallery img {
+    flex: 0 0 50%; /* 2 images per row on mobile */
+    min-width: 50%;
+    max-width: 50%;
+    height: 180px;
+    padding: 0; /* Keep zero padding on mobile too */
+  }
+}
+
+/* Scrolling Gallery Section - New styles to fix alignment */
+.scrolling-gallery {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gallery-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0; /* Remove any margin */
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Bottom info specific contexts */
+.gallery + .bottom-info {
+  margin-top: 60px; /* Add top margin to separate from gallery */
+}
+
+/* For the about page, keep the reduced spacing we want */
+.about-cta + .bottom-info {
+  padding-top: 40px; /* Further reduced for the about page */
+}
+
+/* Reduce space between info cards and footer on Location page */
+.location-contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem; /* Reduced bottom padding */
+  margin-bottom: 1.5rem; /* Reduced bottom margin */
+}
+
+/* Ensure info-grid doesn't add extra spacing */
+.info-grid {
+  margin-bottom: 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  color: #7d2327;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-section {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h2 {
+  color: #7d2327;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f2ece4;
+}
+
+.address {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.directions-text {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.directions-button {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background-color: #6b8e66;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.directions-button:hover {
+  background-color: #5a7a56;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.day-label {
+  font-weight: 500;
+}
+
+.special-hours {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f2ece4;
+}
+
+.special-hours h3 {
+  color: #6b8e66;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.phone-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #7d2327;
+  text-decoration: none;
+  margin: 1rem 0 2rem;
+}
+
+.social-links h3 {
+  color: #6b8e66;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.social-icons-large {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons-large .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #f2ece4;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons-large .social-icon:hover {
+  background-color: #e5dfd7;
+}
+
+.social-icons-large .social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-section {
+    height: 300px;
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Drinks Page Styles - Updated for zero margins and refined colors */
+.drinks-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0; /* Removed padding to allow sections to touch */
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 0; /* Removed bottom margin */
+  padding: 2rem 1rem;
+}
+
+.page-header h1 {
+  color: #7d2327;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Hero Banner with Overlay */
+.drinks-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 0; /* Removed margin */
+  box-shadow: none; /* Removed shadow for clean edges */
+}
+
+.drinks-hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.3);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Sections Styling */
+.drinks-section {
+  margin-bottom: 0; /* Removed margin */
+  padding: 2rem;
+  background-color: #f8f4ee; /* Warmer off-white */
+  border-radius: 0; /* Removed border radius for clean edges */
+  box-shadow: none; /* Removed shadow for clean edges */
+}
+
+.dark-section {
+  background-color: #774e24; /* Warm golden brown */
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  color: #7d2327;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f2ece4;
+}
+
+.section-title.light {
+  color: #f3ede4; /* Warmer white for cocktail section header */
+  border-bottom-color: rgba(243, 237, 228, 0.3);
+}
+
+/* Beer Section */
+.drinks-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Fixed column layout */
+.drinks-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+}
+
+/* Better structure for the featured cards */
+.drinks-featured-card {
+  background-color: #f3ede4;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.drinks-featured-card h3 {
+  color: #7d2327;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.beer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.beer-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+}
+
+.beer-list li:last-child {
+  border-bottom: none;
+}
+
+/* Improved container for standard drafts */
+.standard-drafts-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* Better responsive beer list */
+.standard-drafts-container .beer-list {
+  flex: 1;
+  max-width: 200px;
+}
+
+/* Fixed beer barrel positioning */
+.beer-barrel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  flex: 1;
+}
+
+/* Beer barrel SVG sizing - increased size */
+.beer-barrel-container svg {
+  width: 130px; /* Increased from 100px */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .standard-drafts-container {
+    flex-direction: column;
+  }
+
+  .beer-barrel-container {
+    margin-top: 1rem;
+  }
+}
+
+.craft-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.craft-highlight {
+  padding: 1rem;
+  background-color: rgba(107, 142, 102, 0.1);
+  border-left: 4px solid #6b8e66;
+  font-style: italic;
+}
+
+/* Enhancing the takeout note styling */
+.drinks-note {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(125, 35, 39, 0.08);
+  border-radius: 8px;
+  margin-top: 2rem;
+  border: 1px solid rgba(125, 35, 39, 0.15);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cocktails Section */
+.cocktails-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.cocktail-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter */
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cocktail-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.cocktail-card h3 {
+  color: white;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.cocktail-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+/* Spirits Section */
+.spirits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+/* Spirits section with fixed 3-column layout and icons */
+.spirits-container.fixed-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Spirit category styling */
+.spirit-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f3ede4;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.spirit-category:hover {
+  transform: translateY(-5px);
+}
+
+/* Spirit icon styling */
+.spirit-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.spirit-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Mobile responsiveness for spirits grid */
+@media (max-width: 992px) {
+  .spirits-container.fixed-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .spirits-container.fixed-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spirits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.spirits-list li {
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Footer */
+.drinks-footer {
+  text-align: center;
+  background-color: #f8f4ee; /* Match spirits section */
+  padding: 2rem;
+  border-radius: 0; /* Removed border radius */
+  margin-top: 0; /* Removed margin */
+  box-shadow: none; /* Removed shadow */
+}
+
+.drinks-footer p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .drinks-hero-banner {
+    height: 300px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .drinks-row {
+    flex-direction: column;
+  }
+
+  .drinks-column {
+    width: 100%;
+  }
+
+  .spirits-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .spirits-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cocktails-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Wine Section Styles */
+.wine-description {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.wine-highlight {
+  font-style: italic;
+  color: #7d2327;
+  margin-bottom: 20px;
+}
+
+.wine-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Non-Alcoholic Section Styles */
+.non-alcoholic-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.non-alcoholic-card {
+  background-color: #f9f5f0;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.non-alcoholic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.beverage-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.non-alcoholic-card h3 {
+  text-align: center;
+  color: #7d2327;
+  margin-bottom: 15px;
+}
+
+.non-alcoholic-card p {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* About Page Styles */
+
+/* Hero Section */
+.about-hero {
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto 0;
+  position: relative;
+}
+
+.about-hero-image {
+  position: relative;
+  width: 100%;
+  height: 800px; /* Increased to 800px as requested */
+  overflow: hidden;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-overlay h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-overlay .tagline {
+  color: #f2ece4;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Main About Content */
+.about-main {
+  padding: 4rem 2rem;
+  background-color: #f2ece4;
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  color: #7d2327;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.about-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #7d2327;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Dining Room Section - Changed to match site background */
+.dining-room-section {
+  padding: 4rem 2rem;
+  background-color: #f2ece4;
+}
+
+.cta-container {
+  margin-top: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #7d2327;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5f1b1f;
+}
+
+.cta-button.secondary {
+  background-color: #6b8e66;
+}
+
+.cta-button.secondary:hover {
+  background-color: #587552;
+}
+
+/* History Section with Dark Styling - Updated for Stream.webp */
+.history-section {
+  background-color: #1a1a1a;
+  background-image: url("/images/Stream.webp");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  padding: 5rem 2rem;
+  color: #fff;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.history-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Less dark filter as requested */
+  z-index: 0;
+}
+
+.history-overlay {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.history-section h2 {
+  color: #d4af37;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-family: "Times New Roman", serif;
+}
+
+/* New history content styles replacing timeline */
+.history-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.history-content p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* Call to Action - Reduced bottom padding */
+.about-cta {
+  background-color: #f2ece4;
+  padding: 5rem 2rem 0; /* Changed from 2rem to 0 */
+  text-align: center;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cta-overlay {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-cta h2 {
+  color: #7d2327;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-hero-image {
+    height: 500px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay .tagline {
+    font-size: 1.2rem;
+  }
+
+  .about-content,
+  .about-image {
+    flex: 1 0 100%;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .history-content p {
+    font-size: 1rem;
+  }
+
+  .history-section h2,
+  .about-cta h2 {
+    font-size: 2rem;
+  }
+}

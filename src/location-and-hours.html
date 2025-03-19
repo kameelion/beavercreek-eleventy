@@ -1,0 +1,209 @@
+---
+title: Location and Hours
+permalink: "/location-and-hours/"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beaver Creek Tavern</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="logo">
+          <img src="/images/BCT-Logo.jpg" alt="Beaver Creek Tavern Logo" />
+        </a>
+      </div>
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li>
+            <a href="/" class="{{ 'active' if page.url == '/' else '' }}"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="/menu.pdf" target="_blank">Menu</a></li>
+          <li>
+            <a
+              href="/about/"
+              class="{{ 'active' if page.url == '/about/' else '' }}"
+              >About</a
+            >
+          </li>
+          <li><a href="/drinks/">Drinks</a></li>
+          <li><a href="/gift-cards/">Gift Cards</a></li>
+          <li>
+            <a
+              href="/location-and-hours/"
+              class="{{ 'active' if page.url == '/location-and-hours/' else '' }}"
+              >Location & Hours</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="social-icons">
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="/images/icons/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="/images/icons/facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Location and Contact Content -->
+    <section class="location-contact-container">
+      <div class="page-header">
+        <h1>Visit Us</h1>
+      </div>
+
+      <!-- Map Section -->
+      <div class="map-section">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.3891434483663!2d-75.6963!3d40.0337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6f0e61e0aa0a5%3A0x8eb199bef80eb0b4!2s1350%20Bondsville%20Rd%2C%20Downingtown%2C%20PA%2019335!5e0!3m2!1sen!2sus!4v1616000000000!5m2!1sen!2sus"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+
+      <!-- Info Grid -->
+      <div class="info-grid">
+        <!-- Location Info -->
+        <div class="info-card location-info">
+          <h2>Location</h2>
+          <p class="address">
+            1350 Bondsville Rd.<br />
+            Downingtown, PA 19335
+          </p>
+          <p class="directions-text">
+            Conveniently located at the intersection of 340 and Bondsville road,
+            minutes away from the Route 30 by-pass and 322.
+          </p>
+          <a
+            href="https://maps.google.com/?q=1350+Bondsville+Rd+Downingtown+PA+19335"
+            class="directions-button"
+            target="_blank"
+            >Get Directions</a
+          >
+        </div>
+
+        <!-- Hours Info -->
+        <div class="info-card hours-info">
+          <h2>Hours</h2>
+          <div class="hours-grid">
+            <div class="day-label">Thursday – Monday:</div>
+            <div class="time-value">12pm – 11pm</div>
+
+            <div class="day-label">Friday & Saturday:</div>
+            <div class="time-value">Extended Hours</div>
+
+            <div class="day-label">Kitchen Hours:</div>
+            <div class="time-value">12:15pm – 9pm</div>
+
+            <div class="day-label">Tuesday & Wednesday:</div>
+            <div class="time-value">Closed</div>
+          </div>
+
+          <div class="special-hours">
+            <h3>Special Events</h3>
+            <p>
+              <strong>Prime Rib:</strong> 1st Saturday of each month starting at
+              4pm only.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="info-card contact-info">
+          <h2>Contact Us</h2>
+          <p>For reservations or inquiries:</p>
+          <a href="tel:4845930481" class="phone-number">484-593-0481</a>
+
+          <div class="social-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons-large">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-icon"
+              >
+                <img src="/images/icons/instagram.svg" alt="Instagram" />
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="social-icon"
+              >
+                <img src="/images/icons/facebook.svg" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Info Section -->
+    <section class="bottom-info">
+      <div class="info-container">
+        <div class="info-block">
+          <h3>LOCATION</h3>
+          <p>1350 Bondsville Rd.<br />Downingtown, PA 19335</p>
+        </div>
+
+        <div class="info-block">
+          <h3>HOURS</h3>
+          <p>Thursday – Monday: 12pm – 11pm <br />Later on Fri/Sat</p>
+          <p><strong>Kitchen:</strong> 12:15pm – 9pm</p>
+          <p>
+            <strong>Prime Rib:</strong> 1st Saturday of each month starting at
+            4pm only.
+          </p>
+        </div>
+
+        <div class="info-block">
+          <h3>CONTACT</h3>
+          <p>Phone: <a href="tel:+14845930481">484-593-0481</a></p>
+        </div>
+      </div>
+
+      <div class="social-footer">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="/images/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="/images/icons/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

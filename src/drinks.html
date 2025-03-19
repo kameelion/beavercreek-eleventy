@@ -1,0 +1,610 @@
+---
+title: Drinks
+permalink: "/drinks/"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beaver Creek Tavern</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="logo">
+          <img src="/images/BCT-Logo.jpg" alt="Beaver Creek Tavern Logo" />
+        </a>
+      </div>
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li>
+            <a href="/" class="{{ 'active' if page.url == '/' else '' }}"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="/menu.pdf" target="_blank">Menu</a></li>
+          <li>
+            <a
+              href="/about/"
+              class="{{ 'active' if page.url == '/about/' else '' }}"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="/drinks/"
+              class="{{ 'active' if page.url == '/drinks/' else '' }}"
+              >Drinks</a
+            >
+          </li>
+          <li><a href="/gift-cards/">Gift Cards</a></li>
+          <li>
+            <a
+              href="/location-and-hours/"
+              class="{{ 'active' if page.url == '/location-and-hours/' else '' }}"
+              >Location & Hours</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="social-icons">
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="/images/icons/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="/images/icons/facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Drinks Content -->
+    <section class="drinks-container">
+      <div class="page-header">
+        <h1>Our Drinks</h1>
+      </div>
+
+      <!-- Hero Banner with Overlay -->
+      <!-- Updated Hero Banner with Rotating-Beer-on-Tap.webp -->
+      <div class="drinks-hero-banner">
+        <img
+          src="/images/Rotating-Beer-on-Tap.webp"
+          alt="Beer Taps at Beaver Creek Tavern"
+        />
+        <div class="hero-overlay">
+          <h2>12 Great Beers on Tap</h2>
+          <p>Featuring 6 standard favorites and 6 rotating craft selections</p>
+        </div>
+      </div>
+
+      <!-- Fix for the Beer Section Structure -->
+      <div class="drinks-section">
+        <h2 class="section-title">Beer Selection</h2>
+
+        <div class="drinks-row">
+          <div class="drinks-column">
+            <div class="drinks-featured-card">
+              <h3>6 Standard Drafts</h3>
+              <div class="standard-drafts-container">
+                <ul class="beer-list">
+                  <li>Yuengling Lager</li>
+                  <li>Miller Lite</li>
+                  <li>Coors Light</li>
+                  <li>Blue Moon Belgian White</li>
+                  <li>Guinness Stout</li>
+                  <li>Stella Artois</li>
+                </ul>
+
+                <!-- Beer barrel SVG with proper positioning -->
+                <div class="beer-barrel-container">
+                  <svg
+                    viewBox="0 0 100 120"
+                    fill="none"
+                    stroke="#7d2327"
+                    stroke-width="1.5"
+                  >
+                    <!-- Barrel top rim -->
+                    <ellipse cx="50" cy="20" rx="30" ry="10" />
+
+                    <!-- Barrel bottom rim -->
+                    <ellipse cx="50" cy="100" rx="30" ry="10" />
+
+                    <!-- Barrel sides -->
+                    <line x1="20" y1="20" x2="20" y2="100" />
+                    <line x1="80" y1="20" x2="80" y2="100" />
+
+                    <!-- Barrel body (curved sides) -->
+                    <path d="M20,20 C15,50 15,70 20,100" />
+                    <path d="M80,20 C85,50 85,70 80,100" />
+
+                    <!-- Barrel top and bottom visible inner circles -->
+                    <ellipse cx="50" cy="20" rx="25" ry="7" />
+                    <ellipse cx="50" cy="100" rx="25" ry="7" />
+
+                    <!-- Barrel bands -->
+                    <ellipse cx="50" cy="40" rx="32" ry="11" />
+                    <ellipse cx="50" cy="60" rx="33" ry="11" />
+                    <ellipse cx="50" cy="80" rx="32" ry="11" />
+
+                    <!-- Tap fixture -->
+                    <circle cx="50" cy="60" r="3" />
+                    <path d="M50,63 L50,70 L55,75" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="drinks-column">
+            <div class="drinks-featured-card">
+              <h3>6 Rotating Craft Selections</h3>
+              <p class="craft-description">
+                We proudly rotate our craft beer selection regularly, featuring
+                local breweries and seasonal favorites. Ask your server about
+                our current offerings!
+              </p>
+              <p class="craft-highlight">
+                Previous selections have included craft beers from Victory,
+                Troegs, Dogfish Head, Yards, and other exceptional breweries.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Improved styling for the takeout note -->
+        <div class="drinks-note">
+          <p>
+            Bottles also available for take-out. Ask your server for details.
+          </p>
+        </div>
+      </div>
+
+      <!-- Wine Section - Added after the Beer Section and before the Cocktails Section -->
+      <div class="drinks-section">
+        <h2 class="section-title">Wine Selection</h2>
+
+        <div class="drinks-row">
+          <div class="drinks-column">
+            <div class="drinks-featured-card">
+              <h3>Red Wines</h3>
+              <p class="wine-description">
+                We offer a curated selection of red wines available by the glass
+                or bottle, including Cabernet Sauvignon, Merlot, Pinot Noir, and
+                Malbec.
+              </p>
+              <p class="wine-highlight">
+                Ask your server about our featured wine of the month and special
+                regional selections.
+              </p>
+
+              <!-- Wine bottle SVG -->
+              <div class="wine-icon-container">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="60"
+                  height="60"
+                  stroke="#7d2327"
+                  fill="none"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12,2 L12,6 C12,6 15,7 15,10 C15,13 15,20 15,20 C15,21 14,22 12,22 C10,22 9,21 9,20 C9,20 9,13 9,10 C9,7 12,6 12,6 L12,2 Z"
+                  ></path>
+                  <path d="M11,4 L13,4"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="drinks-column">
+            <div class="drinks-featured-card">
+              <h3>White Wines</h3>
+              <p class="wine-description">
+                Our white wine selection includes Chardonnay, Pinot Grigio,
+                Sauvignon Blanc, and Riesling, available by glass or bottle.
+              </p>
+              <p class="wine-highlight">
+                Perfect pairings for our menu items - ask your server for
+                recommendations.
+              </p>
+
+              <!-- Wine glass SVG -->
+              <div class="wine-icon-container">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="60"
+                  height="60"
+                  stroke="#7d2327"
+                  fill="none"
+                  stroke-width="1.5"
+                >
+                  <path d="M9,3 L15,3 C15,3 16,9 12,12 C8,9 9,3 9,3 Z"></path>
+                  <path d="M12,12 L12,20"></path>
+                  <path d="M9,20 L15,20"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cocktails Section -->
+      <div class="drinks-section dark-section">
+        <h2 class="section-title light">Classic Cocktail Examples</h2>
+
+        <div class="cocktails-grid">
+          <div class="cocktail-card">
+            <h3>Bloody Mary</h3>
+            <p>
+              Our house specialty with vodka, signature spicy mix, celery, and
+              olive
+            </p>
+          </div>
+
+          <div class="cocktail-card">
+            <h3>Old Fashioned</h3>
+            <p>Bourbon, bitters, sugar, and orange peel - a timeless classic</p>
+          </div>
+
+          <div class="cocktail-card">
+            <h3>Margarita</h3>
+            <p>
+              Tequila, triple sec, and fresh lime juice - available classic or
+              flavored
+            </p>
+          </div>
+
+          <div class="cocktail-card">
+            <h3>Manhattan</h3>
+            <p>Whiskey, sweet vermouth, and bitters with a cherry garnish</p>
+          </div>
+
+          <div class="cocktail-card">
+            <h3>Mojito</h3>
+            <p>White rum, sugar, lime juice, soda water, and fresh mint</p>
+          </div>
+
+          <div class="cocktail-card">
+            <h3>Martini</h3>
+            <p>
+              Gin or vodka with dry vermouth - shaken or stirred to your
+              preference
+            </p>
+          </div>
+
+          <div class="cocktail-card">
+            <h3>White Russian</h3>
+            <p>
+              Vodka, coffee liqueur (Kahlúa), and cream layered for a smooth,
+              rich flavor
+            </p>
+          </div>
+
+          <div class="cocktail-card">
+            <h3>Cosmopolitan</h3>
+            <p>
+              Vodka, cranberry juice, triple sec, and fresh lime juice - a
+              vibrant and refreshing classic
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Non-Alcoholic Beverages - Added after the Cocktails Section and before the Premium Spirits Section -->
+      <div class="drinks-section">
+        <h2 class="section-title">Non-Alcoholic Offerings</h2>
+
+        <div class="non-alcoholic-container">
+          <div class="non-alcoholic-card">
+            <div class="beverage-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M18,8 C18,4 14,3 12,3 C10,3 6,4 6,8 C6,12 12,18 12,18 C12,18 18,12 18,8 Z"
+                ></path>
+                <path d="M12,18 L12,21"></path>
+                <path d="M9,21 L15,21"></path>
+              </svg>
+            </div>
+            <h3>Coffee & Tea</h3>
+            <p>
+              We serve freshly brewed regular and decaf coffee, as well as a
+              selection of black, green, and herbal teas.
+            </p>
+          </div>
+
+          <div class="non-alcoholic-card">
+            <div class="beverage-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path d="M6,4 L18,4 L16,20 L8,20 Z"></path>
+                <path d="M4,8 L20,8"></path>
+              </svg>
+            </div>
+            <h3>Soft Drinks & Water</h3>
+            <p>
+              Enjoy our selection of soft drinks, sparkling water, and bottled
+              water.
+            </p>
+          </div>
+
+          <div class="non-alcoholic-card">
+            <div class="beverage-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M8,2 L16,2 L18,6 C18,6 18,8 12,10 C6,8 6,6 6,6 L8,2 Z"
+                ></path>
+                <path
+                  d="M6,6 L5,13 C5,15 8,17 12,17 C16,17 19,15 19,13 L18,6"
+                ></path>
+                <path d="M12,17 L12,22"></path>
+                <path d="M8,22 L16,22"></path>
+              </svg>
+            </div>
+            <h3>Specialty Non-Alcoholic</h3>
+            <p>
+              Try our mocktails and other non-alcoholic specialty drinks -
+              perfect for designated drivers or those abstaining.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Spirits Section -->
+      <!-- Premium Spirits Section with 3-column layout and icons -->
+      <div class="drinks-section">
+        <h2 class="section-title">Premium Spirits</h2>
+
+        <div class="spirits-container fixed-columns">
+          <div class="spirit-category">
+            <div class="spirit-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M8,22 L16,22 L16,18 C16,15 12,14 12,9 C12,7 12,2 12,2 L8,2 C8,2 8,7 8,9 C8,14 4,15 4,18 L4,22 L8,22 Z"
+                ></path>
+                <line x1="12" y1="6" x2="12" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Whiskey & Bourbon</h3>
+            <ul class="spirits-list">
+              <li>Maker's Mark</li>
+              <li>Bulleit Bourbon</li>
+              <li>Jack Daniel's</li>
+              <li>Jameson Irish Whiskey</li>
+              <li>Crown Royal</li>
+              <li>Woodford Reserve</li>
+            </ul>
+          </div>
+
+          <div class="spirit-category">
+            <div class="spirit-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M9,2 L15,2 L15,5 C15,5 14,8 12,8 C10,8 9,5 9,5 L9,2 Z"
+                ></path>
+                <path d="M12,8 L12,22"></path>
+                <path d="M8,12 L16,12"></path>
+                <path d="M9,17 L15,17"></path>
+              </svg>
+            </div>
+            <h3>Scotch</h3>
+            <ul class="spirits-list">
+              <li>Johnnie Walker Black</li>
+              <li>Glenlivet 12 Year</li>
+              <li>Macallan 12 Year</li>
+              <li>Chivas Regal</li>
+              <li>Dewar's White Label</li>
+            </ul>
+          </div>
+
+          <div class="spirit-category">
+            <div class="spirit-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path d="M8,3 L16,3 L14,10 L10,10 L8,3 Z"></path>
+                <path
+                  d="M10,10 L10,18 C10,20 8,21 8,21 L16,21 C16,21 14,20 14,18 L14,10"
+                ></path>
+              </svg>
+            </div>
+            <h3>Vodka</h3>
+            <ul class="spirits-list">
+              <li>Tito's Handmade</li>
+              <li>Grey Goose</li>
+              <li>Ketel One</li>
+              <li>Absolut</li>
+              <li>Stolichnaya</li>
+            </ul>
+          </div>
+
+          <div class="spirit-category">
+            <div class="spirit-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="7" r="5"></circle>
+                <path
+                  d="M9,12 L9,19 C9,20.5 10,21 12,21 C14,21 15,20.5 15,19 L15,12"
+                ></path>
+              </svg>
+            </div>
+            <h3>Gin</h3>
+            <ul class="spirits-list">
+              <li>Tanqueray</li>
+              <li>Bombay Sapphire</li>
+              <li>Hendrick's</li>
+              <li>Beefeater</li>
+              <li>New Amsterdam</li>
+            </ul>
+          </div>
+
+          <div class="spirit-category">
+            <div class="spirit-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12,3 L16,8 L16,16 C16,18.5 14,20 12,20 C10,20 8,18.5 8,16 L8,8 L12,3 Z"
+                ></path>
+                <path d="M12,12 L16,12"></path>
+                <path d="M12,16 L16,16"></path>
+              </svg>
+            </div>
+            <h3>Tequila & Mezcal</h3>
+            <ul class="spirits-list">
+              <li>Patrón Silver</li>
+              <li>Don Julio Blanco</li>
+              <li>Jose Cuervo Gold</li>
+              <li>Casamigos Reposado</li>
+              <li>Del Maguey Mezcal</li>
+            </ul>
+          </div>
+
+          <div class="spirit-category">
+            <div class="spirit-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+                stroke="#7d2327"
+                fill="none"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M9,2 L15,2 L14,8 C14,8 13,10 12,10 C11,10 10,8 10,8 L9,2 Z"
+                ></path>
+                <path
+                  d="M8,14 L16,14 C16,18 12,22 12,22 C12,22 8,18 8,14 Z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Rum</h3>
+            <ul class="spirits-list">
+              <li>Bacardi Superior</li>
+              <li>Captain Morgan Spiced</li>
+              <li>Malibu</li>
+              <li>Mount Gay</li>
+              <li>Kraken Dark</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="drinks-footer">
+        <p>
+          Selection may vary. Please ask your server about our current
+          offerings.
+        </p>
+        <p>We proudly serve you responsibly. Please drink responsibly.</p>
+      </div>
+    </section>
+
+    <!-- Bottom Info Section -->
+    <section class="bottom-info">
+      <div class="info-container">
+        <div class="info-block">
+          <h3>LOCATION</h3>
+          <p>1350 Bondsville Rd.<br />Downingtown, PA 19335</p>
+        </div>
+
+        <div class="info-block">
+          <h3>HOURS</h3>
+          <p>Thursday – Monday: 12pm – 11pm <br />Later on Fri/Sat</p>
+          <p><strong>Kitchen:</strong> 12:15pm – 9pm</p>
+          <p>
+            <strong>Prime Rib:</strong> 1st Saturday of each month starting at
+            4pm only.
+          </p>
+        </div>
+
+        <div class="info-block">
+          <h3>CONTACT</h3>
+          <p>Phone: <a href="tel:+14845930481">484-593-0481</a></p>
+        </div>
+      </div>
+
+      <div class="social-footer">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="/images/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="/images/icons/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
