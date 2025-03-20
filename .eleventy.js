@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy the menu PDF to `_site/`
   eleventyConfig.addPassthroughCopy("src/menu.pdf");
+  eleventyConfig.addPassthroughCopy("src/_redirects");
 
   return {
     dir: {

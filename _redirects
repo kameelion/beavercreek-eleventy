@@ -1,0 +1,48 @@
+# Redirect old PDF menus to current menu
+/2020/07/2020-Summer-menu-1_compressed.pdf /menu.pdf 301
+/2020/12/* /menu.pdf 301
+/*/menu*.pdf /menu.pdf 301
+/*/Summer*.pdf /menu.pdf 301
+/*/*.pdf /menu.pdf 301
+
+# Redirect main WordPress pages to their equivalents on the new site
+/menu /menu.pdf 301
+/drinks /drinks.html 301
+/about /about.html 301
+/contact /location-and-hours.html 301
+
+# Redirect WordPress author pages
+/author/* /about.html 301
+/author/kevdev20 /about.html 301
+
+# Redirect WordPress category and tag pages
+/fusion_tb_category /index.html 301
+/category/* /index.html 301
+/tag/* /index.html 301
+
+# Redirect any WordPress pagination
+/page/* /index.html 301
+
+# Redirect WordPress feeds
+/feed /index.html 301
+/feed/* /index.html 301
+/rss /index.html 301
+/rss/* /index.html 301
+
+# Redirect old WordPress system URLs
+/*.xml /index.html 301
+/*.php /index.html 301
+
+# Handle any additional content-specific paths we might have missed
+/to-go-menu /menu.pdf 301
+/takeout /menu.pdf 301
+/food /menu.pdf 301
+/specials /menu.pdf 301
+/beers /drinks.html 301
+/cocktails /drinks.html 301
+/wine /drinks.html 301
+/location /location-and-hours.html 301
+/hours /location-and-hours.html 301
+
+# Fallback for any other old URLs not explicitly defined
+/* /index.html 404
