@@ -34,6 +34,38 @@ permalink: "/gift-cards/"
       href="/images/favicon/android-chrome-192x192.png"
     />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <style>
+      /* Critical CSS for preventing filter flicker */
+      .about-hero-image img {
+        will-change: filter;
+        filter: brightness(0.7) !important;
+      }
+
+      .drinks-hero-banner img {
+        will-change: filter;
+        filter: brightness(0.3) !important;
+      }
+
+      .gift-card-section::before {
+        will-change: filter;
+        filter: brightness(0.4) !important;
+      }
+
+      /* Prevent any transition delays that might cause flicker */
+      .about-hero-image img,
+      .drinks-hero-banner img,
+      .gift-card-section::before {
+        transition: none !important;
+      }
+
+      /* Optimize rendering performance */
+      .about-hero-image,
+      .drinks-hero-banner,
+      .gift-card-section {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    </style>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
